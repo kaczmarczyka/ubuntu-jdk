@@ -34,7 +34,7 @@ RUN echo 'root:ubuntu' |chpasswd
 RUN groupadd ubuntu && useradd ubuntu -s /bin/bash -m -g ubuntu -G ubuntu && adduser ubuntu sudo
 RUN echo 'ubuntu:ubuntu' |chpasswd
 
-# expose the working directory, the Tomcat port, the BrowserSync ports, the SSHD port, and run SSHD
+# expose the SSHD port, and run SSHD
 
 EXPOSE	22
 CMD    /usr/sbin/sshd -D
